@@ -1,0 +1,107 @@
+/* Ajuste general del carrusel */
+[carrousel] {
+    display: flex;
+    position: relative;
+    background-color: #47cf73;
+    border-radius: 10px;
+    min-height: 50vh;
+  }
+  
+  [carrousel]::before {
+    content: '';
+    display: block;
+    padding-bottom: 50%;
+  }
+  
+  [name~="carrousel"] {
+    display: none;
+  }
+  
+  [name~="carrousel"]:checked + .slide {
+    pointer-events: auto;
+    opacity: 1;
+    position: relative;
+  }
+  
+  [name~="carrousel"]:checked + .slide .slide-content {
+    opacity: 1;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Ajuste del contenido dentro de cada slide */
+  .slide-content {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Tamaño y estilo de las imágenes más pequeñas */
+  .slide-content img {
+    max-width: 30%;  /* Ajustamos a un tamaño pequeño */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Encabezados en el carrusel */
+  .slide-content h1 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Botones de navegación */
+  .back, .forward {
+    display: block;
+    position: absolute;
+    top: calc(50% - 2rem);
+    height: 4rem;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    font-size: .5rem;
+    background-color: #8cf0ad; /* lighten(#47cf73, 35%) */
+    border-radius: 100px;
+    color: #286943; /* darken(#47cf73, 40%) */
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, .1);
+    transform: scale(.9);
+    transition: transform .2s;
+  }
+  
+  .back:hover, .forward:hover {
+    transform: scale(1);
+    background-color: white;
+  }
+  
+  .back {
+    left: calc(0% + 1rem);
+  }
+  
+  .forward {
+    right: calc(0% + 1rem);
+  }
+  
+  body {
+    padding: 1rem;
+  }
+  
+  [carrousel] h1 {
+    font-size: 5rem;
+    color: white;
+    text-shadow: 0 3px 0 rgba(0, 0, 0, .2);
+  }
+  

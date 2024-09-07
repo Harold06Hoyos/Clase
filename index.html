@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi Página Web</title>
     <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/slider.css" />
   </head>
   <body>
     <header class="header">
       <div class="container">
+        <img src="../imagenes/logo2.png">
         <h1>Nombre de la Página</h1>
         <p>Aló con Dorian</p>
       </div>
@@ -18,8 +20,8 @@
       <div class="container">
         <ul>
           <li><a href="inicio.html">Inicio</a></li>
-          <li><a href="#">Servicios</a></li>
-          <li><a href="#">Acerca de</a></li>
+          <li><a href="Servicios.html">Servicios</a></li>
+          <li><a href="Acerca.html">Acerca de</a></li>
           <li><a href="#">Contacto</a></li>
         </ul>
       </div>
@@ -34,13 +36,55 @@
           placeat facilis, excepturi, porro architecto quas ullam obcaecati amet
           aut doloribus fugiat vero?
         </p>
-      </div>
+      </div>      
     </section>
+    <section class="">
+      <div>
+        <input id="slide-0" name="carrousel" type="radio" checked/>
+        <div class="slide">
+          <label for="slide-3" class="back">◀</label>
+          <div class="slide-content">
+            <img src="../imagenes/imagen1.png" alt="Image 1">
+          </div>
+          <label for="slide-1" class="forward">▶</label>
+        </div>
+        
+        <input id="slide-1" name="carrousel" type="radio" />
+        <div class="slide">
+        <label for="slide-0" class="back">◀</label>
+        <div class="slide-content">
+          <img src="../imagenes/imagen2.png" alt="Image 2">
+        </div>
+        <label for="slide-2" class="forward">▶</label>
+      </div>
+      
+      <input id="slide-2" name="carrousel" type="radio" />
+      <div class="slide">
+        <label for="slide-1" class="back">◀</label>
+        <div class="slide-content">
+          <img src="../imagenes/imagen3.png" alt="Image 3">
+        </div>
+        <label for="slide-3" class="forward">▶</label>
+      </div>  
+      
+      <input id="slide-3" name="carrousel" type="radio" />
+      <div class="slide">
+        <label for="slide-2" class="back">◀</label>
+        <div class="slide-content">
+          <img src="../imagenes/imagen4.png" alt="Image 4">
+        </div>
+        <label for="slide-0" class="forward">▶</label>
+      </div>
+    </div>
 
+    </section>
+    
     <footer class="footer">
       <div class="container">
         <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
       </div>
-    </footer>
-  </body>
+    </footer> 
+
+
+  </body> 
 </html>
