@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.main-section {
+  background-image: url("imagen-de-fondo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
